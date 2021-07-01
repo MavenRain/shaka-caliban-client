@@ -1,4 +1,4 @@
-# shaka-seed
+# shaka-caliban-client
 
 ## To Develop:
 1. Launch a sbt session with `sbt`.
@@ -8,5 +8,5 @@
 ## To Deploy
 1. Run `fullLinkJS`.
 2. Copy `prod.index.html` to `index.html` on your server.
-3. Copy `target/scala-3.0.0-RC3/shaka-seed-fastopt/main.js` to `shaka-seed.js` on your server.
+3. Copy `target/scala-3.0.0/shaka-caliban-client-fastopt/main.js` to `shaka-caliban-client.js` on your server.
 4. Redeploy the server.

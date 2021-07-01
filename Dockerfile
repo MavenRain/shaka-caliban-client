@@ -18,6 +18,8 @@ RUN \
 RUN mkdir -p /root/build/project
 COPY . /root/build
 RUN cd /root/build && sbt compile
+COPY target/scala-3.0.0/shaka-caliban-client-fastopt/main.js shaka-caliban-client.js
+COPY prod.index.html index.html
 
 EXPOSE 9000
 WORKDIR /root/build
