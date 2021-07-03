@@ -47,9 +47,10 @@ object Client {
   object ColorQueries {
     def characters[A](
         innerSelection: SelectionBuilder[Character, A]
-    ): SelectionBuilder[_root_.caliban.client.Operations.RootQuery, List[A]] =
-      _root_.caliban.client.SelectionBuilder
-        .Field("characters", ListOf(Obj(innerSelection)))
+    ): SelectionBuilder[_root_.caliban.client.Operations.RootQuery, Option[
+      List[A]
+    ]] = _root_.caliban.client.SelectionBuilder
+      .Field("characters", OptionOf(ListOf(Obj(innerSelection))))
     def character[A](
         name: String
     )(innerSelection: SelectionBuilder[Character, A])(implicit
